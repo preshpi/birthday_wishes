@@ -43,7 +43,7 @@ function Cake() {
         lowFrequencyValues.reduce((sum, value) => sum + value, 0) /
         lowFrequencyValues.length;
 
-      const blowThreshold = 50; // Moderate threshold
+      const blowThreshold = 20; // Moderate threshold
       const requiredDuration = 1000; // 1. 5 sec blow required
 
       if (averageLowFrequency > blowThreshold) {
@@ -73,9 +73,15 @@ function Cake() {
     };
   }, []);
 
+  const handleTap = () => {
+    setCandlesBlownOut(true);
+  };
   return (
     <>
-      <div className="bg-black/80 h-screen w-screen flex items-center justify-center overflow-hidden relative">
+      <div
+        onClick={handleTap}
+        className="bg-black/80 h-screen w-screen flex items-center justify-center overflow-hidden relative"
+      >
         {candlesBlownOut && (
           <div
             className="absolute inset-0 bg-cover bg-center z-50"
@@ -139,7 +145,7 @@ function Cake() {
                       }}
                       className="block translate-x-10 translate-y-[80px] rotate-[30deg] text-gray-200 text-xl"
                     >
-                      blow
+                      tap
                     </motion.div>
                   </div>
                   <div>
