@@ -65,14 +65,19 @@ function Picture() {
 
       {showText && (
         <Link to="/card">
-          <motion.p
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="absolute text-4xl font-bold text-customBlue inset-0 flex justify-center items-center text-center transform rotate-6 cursor-pointer z-50 bg-white/70"
-          >
-            You&apos;re Getting Old! gurlll! 🙂‍↔️
-          </motion.p>
+          <div>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="absolute text-4xl font-bold text-customBlue inset-0 flex justify-center items-center text-center transform rotate-6 cursor-pointer z-50 bg-white/70"
+            >
+              You&apos;re Getting Old! gurlll! 🙂‍↔️
+            </motion.p>
+            <p className="-mt-[4rem] text-center text-black font-medium text-sm ">
+              "Click for Next Page"
+            </p>{" "}
+          </div>
         </Link>
       )}
     </SectionWrapper>

@@ -5,6 +5,7 @@ import picture2 from "./IMG2.png";
 import picture3 from "./IMG3.png";
 import picture4 from "./IMG4.png";
 import picture5 from "./IMG5.png";
+import audio from "./birthday.mp3";
 
 import confetti from "./confetti.gif";
 
@@ -18,5 +19,6 @@ export {
   picture4,
   picture5,
   confetti,
+  audio,
   CakeSVG,
 };
